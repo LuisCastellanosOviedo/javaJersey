@@ -1,5 +1,6 @@
 package com.example.javaJersey.javaJersey.Entity;
 
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
@@ -13,6 +14,8 @@ public class Activity {
     private String name;
     private String description;
     private int time;
+    private User user;
+
 
     public Activity() {
     }
@@ -25,6 +28,7 @@ public class Activity {
         this.time = time;
     }
 
+    @XmlElement(name = " name nombre ")
     public String getName() {
         return name;
     }
@@ -33,6 +37,7 @@ public class Activity {
         this.name = name;
     }
 
+    @XmlElement(name = " description  descripcion ")
     public String getDescription() {
         return description;
     }
@@ -41,12 +46,21 @@ public class Activity {
         this.description = description;
     }
 
+    @XmlElement(name = " time duracion en horas  ")
     public int getTime() {
         return time;
     }
 
     public void setTime(int time) {
         this.time = time;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }
 
