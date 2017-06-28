@@ -25,7 +25,7 @@ public class RestActivityService {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getFirstActivity(){
-        return Response.status(200).entity(activityRepository.getFirstActivity()).build();
+    public Activity getFirstActivity(){
+        return activityRepository.getFirstActivity();
     }
 }
